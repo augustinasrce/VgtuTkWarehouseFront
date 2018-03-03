@@ -19,4 +19,7 @@ export class EquipmentComponent implements OnInit {
         this.daiktai = data;
       });
   }
+  onClickEdit(daiktas) {
+    console.log(daiktas.id);
+  }
 }

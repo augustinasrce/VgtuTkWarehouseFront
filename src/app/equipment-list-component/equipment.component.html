@@ -6,6 +6,7 @@
     <th>description</th>
     <th>quantity</th>
     <th>date purchased</th>
+    <th></th>
   </tr>
   <tr *ngFor="let daiktas of daiktai">
     <td>{{daiktas.id}}</td>
@@ -13,5 +14,6 @@
     <td>{{daiktas.description}}</td>
     <td>{{daiktas.quantity}}</td>
     <td>{{daiktas.purchaseDate}}</td>
+    <td><img src="../../icons/index.png" alt="edit" (click)="onClickEdit(daiktas)" routerLink="/save"></td>
   </tr>
 </table>

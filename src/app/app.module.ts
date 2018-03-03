@@ -3,10 +3,10 @@ import {NgModule} from '@angular/core';
 
 
 import {AppComponent} from './app.component';
-import {EquipmentComponent} from './equipment-component/equipment.component';
+import {EquipmentComponent} from './equipment-list-component/equipment.component';
 import {HttpClientModule} from '@angular/common/http';
 import {AppRoutingModuleModule} from './app-routing-module/app-routing-module.module';
-import { SaveFormComponent } from './save-form/save-form.component';
+import { SaveFormComponent } from './save-equipment-form/save-form.component';
 import {FormsModule} from '@angular/forms';
 
 
