@@ -7,6 +7,7 @@ import {EquipmentComponent} from './equipment-component/equipment.component';
 import {HttpClientModule} from '@angular/common/http';
 import {AppRoutingModuleModule} from './app-routing-module/app-routing-module.module';
 import { SaveFormComponent } from './save-form/save-form.component';
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { SaveFormComponent } from './save-form/save-form.component';
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModuleModule
+    AppRoutingModuleModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
