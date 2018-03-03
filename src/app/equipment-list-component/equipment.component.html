@@ -14,6 +14,6 @@
     <td>{{item.description}}</td>
     <td>{{item.quantity}}</td>
     <td>{{item.purchaseDate | date: 'yyyy/MM/dd'}}</td>
-    <td><img src="../../icons/edit.png" alt="edit" (click)="onClickEdit(item)" routerLink="/save"></td>
+    <td><span class="glyphicon glyphicon-pencil clickable" (click)="onClickEdit(item)" routerLink="/save"></span></td>
   </tr>
 </table>
