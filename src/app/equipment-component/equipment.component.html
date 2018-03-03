@@ -1,0 +1,17 @@
+<h2>Klubelio stuff</h2>
+<table class="table table-striped">
+  <tr>
+    <th>id</th>
+    <th>name</th>
+    <th>description</th>
+    <th>quantity</th>
+    <th>date purchased</th>
+  </tr>
+  <tr *ngFor="let daiktas of daiktai">
+    <td>{{daiktas.id}}</td>
+    <td>{{daiktas.name}}</td>
+    <td>{{daiktas.description}}</td>
+    <td>{{daiktas.quantity}}</td>
+    <td>{{daiktas.purchaseDate}}</td>
+  </tr>
+</table>
