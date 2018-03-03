@@ -14,7 +14,7 @@ export class EquipmentComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.http.get<Daiktas>('https://cors-anywhere.herokuapp.com/vgtu-warehouse-api.herokuapp.com/warehouse/equipment')
+    this.http.get<Daiktas>('http://vgtu-warehouse-api.herokuapp.com/warehouse/equipment')
       .subscribe(data => {
         this.daiktai = data;
       });
