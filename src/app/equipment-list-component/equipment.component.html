@@ -8,12 +8,12 @@
     <th>date purchased</th>
     <th></th>
   </tr>
-  <tr *ngFor="let daiktas of daiktai">
-    <td>{{daiktas.id}}</td>
-    <td>{{daiktas.name}}</td>
-    <td>{{daiktas.description}}</td>
-    <td>{{daiktas.quantity}}</td>
-    <td>{{daiktas.purchaseDate}}</td>
-    <td><img src="../../icons/index.png" alt="edit" (click)="onClickEdit(daiktas)" routerLink="/save"></td>
+  <tr *ngFor="let item of items">
+    <td>{{item.id}}</td>
+    <td>{{item.name}}</td>
+    <td>{{item.description}}</td>
+    <td>{{item.quantity}}</td>
+    <td>{{item.purchaseDate | date: 'yyyy/MM/dd'}}</td>
+    <td><img src="../../icons/edit.png" alt="edit" (click)="onClickEdit(item)" routerLink="/save"></td>
   </tr>
 </table>

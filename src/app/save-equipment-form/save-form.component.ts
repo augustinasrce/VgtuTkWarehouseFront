@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 
-import {Iranga} from '../equipment-list-component/iranga';
+import {Equipment} from '../equipment-list-component/equipment';
 import {HttpClient} from '@angular/common/http';
 
 @Component({
@@ -13,7 +13,7 @@ export class SaveFormComponent {
   constructor(private http: HttpClient) {
   }
 
-  model = new Iranga();
+  model = new Equipment();
 
   submitted = false;
 

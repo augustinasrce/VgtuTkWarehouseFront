@@ -8,18 +8,19 @@ import {HttpClient} from '@angular/common/http';
 })
 export class EquipmentComponent implements OnInit {
 
-  daiktai: any;
+  items: any;
+  newDate: object;
 
   constructor(private http: HttpClient) {
   }
 
   ngOnInit() {
-    this.http.get<Daiktas>('http://cors-anywhere.herokuapp.com/vgtu-warehouse-api.herokuapp.com/warehouse/equipment')
+    this.http.get<Item>('http://cors-anywhere.herokuapp.com/vgtu-warehouse-api.herokuapp.com/warehouse/equipment')
       .subscribe(data => {
-        this.daiktai = data;
+        this.items = data;
       });
   }
-  onClickEdit(daiktas) {
-    console.log(daiktas.id);
+  onClickEdit(item) {
+    console.log(item.id);
   }
 }

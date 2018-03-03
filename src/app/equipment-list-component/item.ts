@@ -1,8 +1,8 @@
-interface Daiktas {
+interface Item {
   id: string;
   name: string;
   description: string;
   quantity: number;
-  purchaseDate: string;
+  purchaseDate: object;
 
 }

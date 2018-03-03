@@ -1,9 +1,9 @@
-export class Iranga {
+export class Equipment {
 
   public name: string;
   public description: string;
   public quantity: number;
-  public purchaseDate: string;
+  public purchaseDate: object;
 
   constructor() {
   }
