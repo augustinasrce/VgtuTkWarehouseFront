@@ -1,29 +1,21 @@
-import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
-
-import {AppComponent} from './app.component';
-import {EquipmentComponent} from './equipment-list-component/equipment.component';
-import {HttpClientModule} from '@angular/common/http';
-import {AppRoutingModuleModule} from './app-routing-module/app-routing-module.module';
-import { SaveFormComponent } from './save-equipment-form/save-form.component';
-import {FormsModule} from '@angular/forms';
-
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { ItemDashboardModule } from './item-dashboard/item-dashboard.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    EquipmentComponent,
-    SaveFormComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
-    AppRoutingModuleModule,
-    FormsModule
+    AppRoutingModule,
+
+    ItemDashboardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-
 export class AppModule { }
