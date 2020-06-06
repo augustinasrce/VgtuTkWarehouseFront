@@ -10,6 +10,8 @@ import { Item } from "../../models/item.interface";
       <item-detail
         *ngFor="let item of items"
         [detail]="item"
+        (edit)="handleEdit($event)"
+        (delete)="handleDelete($event)"
         >
       </item-detail>
     </div>
@@ -56,5 +58,15 @@ export class ItemDashboardComponent implements OnInit {
         quantity: 2,
       },
     ];
+  }
+
+  handleEdit(item: Item) {
+    console.log("edit");
+    console.log(item);
+  }
+
+  handleDelete(item: Item) {
+    console.log("delete");
+    console.log(item);
   }
 }
