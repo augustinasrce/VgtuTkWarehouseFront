@@ -17,10 +17,10 @@ import { Item } from "../../models/item.interface";
     </div>
   `,
 })
-export class ItemDashboardComponent implements OnInit {
+export class ItemDashboardComponent {
   items: Item[];
 
-  ngOnInit(): void {
+  constructor() {
     this.items = [
       {
         id: 1,

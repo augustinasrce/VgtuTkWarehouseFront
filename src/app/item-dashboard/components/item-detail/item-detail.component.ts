@@ -14,8 +14,7 @@ import { Item } from '../../models/item.interface';
 })
 export class ItemDetailComponent {
 
-  @Input()
-  detail: Item;
+  @Input() detail!: Item;
 
   @Output()
   edit: EventEmitter<Item> = new EventEmitter();
