@@ -4,15 +4,8 @@ import { ItemDashboardComponent } from './containers/item-dashboard/item-dashboa
 import { ItemDetailComponent } from './components/item-detail/item-detail.component';
 
 @NgModule({
-    declarations:[
-      ItemDashboardComponent,
-      ItemDetailComponent
-    ],
-    imports: [
-        CommonModule
-    ],
-    exports: [
-      ItemDashboardComponent
-    ]
+  declarations: [ItemDashboardComponent, ItemDetailComponent],
+  imports: [CommonModule],
+  exports: [ItemDashboardComponent],
 })
-export class ItemDashboardModule{}
+export class ItemDashboardModule {}
