@@ -1,19 +1,17 @@
-import { Component, Input, Output, EventEmitter } from "@angular/core";
+import {
+  Component,
+  Input,
+  Output,
+  EventEmitter,
+} from '@angular/core';
 import { Item } from '../../models/item.interface';
 
 @Component({
-  selector: "item-detail",
-  styleUrls: ["item-detail.component.scss"],
-  template: `
-    <div>
-      {{detail | json}}
-    </div>
-    <button (click)="onEdit()">Edit</button>
-    <button (click)="onDelete()">Delete</button>
-  `,
+  selector: 'app-item-detail',
+  styleUrls: ['item-detail.component.scss'],
+  templateUrl: './item-detail.component.html',
 })
 export class ItemDetailComponent {
-
   @Input() detail!: Item;
 
   @Output()
