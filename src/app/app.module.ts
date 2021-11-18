@@ -16,6 +16,7 @@ import { ItemDashboardComponent } from './item-dashboard/containers/item-dashboa
 import { HomeComponent } from './home/home.component';
 import { ItemRegisterComponent } from './item-register/item-register.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { ItemRegisterModule } from './item-register/item-register.module';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -31,7 +32,6 @@ const routes: Routes = [
     ToolbarComponent,
     MainComponent,
     HomeComponent,
-    ItemRegisterComponent,
     NotFoundComponent,
   ],
   imports: [
@@ -39,6 +39,7 @@ const routes: Routes = [
     BrowserModule,
     AppRoutingModule,
     ItemDashboardModule,
+    ItemRegisterModule,
     MatSidenavModule,
     MatToolbarModule,
     MatListModule,
