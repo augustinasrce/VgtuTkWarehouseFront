@@ -16,6 +16,12 @@ import { ItemDashboardComponent } from './item-dashboard/containers/item-dashboa
 import { HomeComponent } from './home/home.component';
 import { ItemRegisterComponent } from './item-register/item-register.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { ItemRegisterModule } from './item-register/item-register.module';
+import {
+  HttpClientModule,
+  HTTP_INTERCEPTORS,
+} from '@angular/common/http';
+import { AuthenticationInterceptor } from './interceptors/authentication.interceptor';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -31,14 +37,15 @@ const routes: Routes = [
     ToolbarComponent,
     MainComponent,
     HomeComponent,
-    ItemRegisterComponent,
     NotFoundComponent,
   ],
   imports: [
     RouterModule.forRoot(routes),
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     ItemDashboardModule,
+    ItemRegisterModule,
     MatSidenavModule,
     MatToolbarModule,
     MatListModule,
@@ -46,7 +53,14 @@ const routes: Routes = [
     BrowserAnimationsModule,
   ],
   exports: [RouterModule],
-  providers: [],
+  providers: [
+    AuthenticationInterceptor,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useExisting: AuthenticationInterceptor,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
