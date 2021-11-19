@@ -1,4 +1,8 @@
-<table mat-table [dataSource]="items" class="mat-elevation-z8">
+<table
+  mat-table
+  [dataSource]="(equipment | async) || []"
+  class="mat-elevation-z8"
+>
   <ng-container matColumnDef="brand">
     <th mat-header-cell *matHeaderCellDef>Brand</th>
     <td mat-cell *matCellDef="let element">{{ element.brand }}</td>

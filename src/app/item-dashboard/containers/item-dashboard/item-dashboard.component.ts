@@ -1,70 +1,23 @@
-import {
-  animate,
-  state,
-  style,
-  transition,
-  trigger,
-} from '@angular/animations';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { EquipmentService } from 'src/app/services/equipment.service';
 import { Item } from '../../models/item.interface';
 
 @Component({
   selector: 'app-item-dashboard',
   styleUrls: ['item-dashboard.component.scss'],
   templateUrl: './item-dashboard.component.html',
-  animations: [
-    trigger('detailExpand', [
-      state('collapsed', style({ height: '0px', minHeight: '0' })),
-      state('expanded', style({ height: '*' })),
-      transition(
-        'expanded <=> collapsed',
-        animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)'),
-      ),
-    ]),
-  ],
 })
-export class ItemDashboardComponent {
-  items: Item[];
+export class ItemDashboardComponent implements OnInit {
+  equipment: Observable<Item[]>;
   columnsToDisplay = ['brand', 'model', 'description', 'quantity'];
 
-  constructor() {
-    this.items = [
-      {
-        id: 1,
-        brand: 'Petzl',
-        model: 'Atache',
-        description: 'Crab',
-        quantity: 5,
-      },
-      {
-        id: 2,
-        brand: 'Petzl',
-        model: 'OK',
-        description: 'Crab',
-        quantity: 4,
-      },
-      {
-        id: 3,
-        brand: 'Petzl',
-        model: 'Jumar',
-        description: 'Ascender',
-        quantity: 2,
-      },
-      {
-        id: 4,
-        brand: 'Petzl',
-        model: 'Reverso',
-        description: 'Descender',
-        quantity: 1,
-      },
-      {
-        id: 5,
-        brand: 'BD',
-        model: 'Spot',
-        description: 'Headlight',
-        quantity: 2,
-      },
-    ];
+  constructor(private equipmentService: EquipmentService) {
+    this.equipment = this.equipmentService.getEquipment();
+  }
+
+  ngOnInit(): void {
+    this.equipment.subscribe(console.log);
   }
 
   handleEdit(item: Item) {
