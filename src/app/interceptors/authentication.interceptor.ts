@@ -15,8 +15,6 @@ export class AuthenticationInterceptor implements HttpInterceptor {
     request: HttpRequest<unknown>,
     next: HttpHandler,
   ): Observable<HttpEvent<unknown>> {
-    console.log('request', request);
-    console.log('next', next);
     request = request.clone({
       setHeaders: {
         'Content-Type': 'application/json; charset=utf-8',

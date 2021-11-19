@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { EquipmentService } from 'src/app/services/equipment.service';
 import { Item } from '../../models/item.interface';
@@ -8,16 +8,12 @@ import { Item } from '../../models/item.interface';
   styleUrls: ['item-dashboard.component.scss'],
   templateUrl: './item-dashboard.component.html',
 })
-export class ItemDashboardComponent implements OnInit {
+export class ItemDashboardComponent {
   equipment: Observable<Item[]>;
   columnsToDisplay = ['brand', 'model', 'description', 'quantity'];
 
   constructor(private equipmentService: EquipmentService) {
     this.equipment = this.equipmentService.getEquipment();
-  }
-
-  ngOnInit(): void {
-    this.equipment.subscribe(console.log);
   }
 
   handleEdit(item: Item) {
