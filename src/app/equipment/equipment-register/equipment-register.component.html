@@ -3,6 +3,8 @@
     <mat-card-title>Register equipment</mat-card-title>
   </mat-card-title-group>
   <mat-card-content>
-    <app-equipment-register-form></app-equipment-register-form>
+    <app-equipment-register-form
+      (saveEquipmentEmmiter)="onSaveEquipment($event)"
+    ></app-equipment-register-form>
   </mat-card-content>
 </mat-card>

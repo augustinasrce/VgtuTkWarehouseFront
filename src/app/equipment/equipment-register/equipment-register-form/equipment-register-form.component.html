@@ -1,27 +1,45 @@
-<form>
+<form [formGroup]="registerEquipmentForm" (ngSubmit)="onSubmit()">
   <p>
     <mat-form-field appearance="standard">
       <mat-label>Brand</mat-label>
-      <input matInput placeholder="Ex. Petzl" />
+      <input
+        matInput
+        formControlName="brand"
+        placeholder="Ex. Petzl"
+      />
     </mat-form-field>
   </p>
   <p>
     <mat-form-field appearance="standard">
       <mat-label>Model</mat-label>
-      <input matInput placeholder="Ex. Jumar" />
+      <input
+        matInput
+        formControlName="model"
+        placeholder="Ex. Jumar"
+      />
     </mat-form-field>
   </p>
   <p>
     <mat-form-field appearance="standard">
       <mat-label>Description</mat-label>
-      <input matInput placeholder="Ex. Ascender" />
+      <input
+        matInput
+        formControlName="description"
+        placeholder="Ex. Ascender"
+      />
     </mat-form-field>
   </p>
   <p>
     <mat-form-field appearance="standard">
       <mat-label>Quantity</mat-label>
-      <input matInput type="number" />
+      <input matInput formControlName="quantity" type="number" />
     </mat-form-field>
   </p>
-  <button mat-stroked-button>Submit</button>
+  <button
+    mat-stroked-button
+    type="submit"
+    [disabled]="!registerEquipmentForm.valid"
+  >
+    Submit
+  </button>
 </form>
