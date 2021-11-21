@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { MatSnackBar } from '@angular/material/snack-bar';
-import { Observable } from 'rxjs';
 import { WarehouseService } from 'src/app/services/warehouse.service';
 import { Equipment } from '../models/equipment.interface';
 
@@ -10,10 +8,7 @@ import { Equipment } from '../models/equipment.interface';
   styleUrls: ['./equipment-register.component.scss'],
 })
 export class EquipmentRegisterComponent {
-  constructor(
-    private warehouseService: WarehouseService,
-    private _snackBar: MatSnackBar,
-  ) {}
+  constructor(private warehouseService: WarehouseService) {}
 
   onSaveEquipment(equipment: Equipment) {
     this.warehouseService.saveEquipment(equipment);

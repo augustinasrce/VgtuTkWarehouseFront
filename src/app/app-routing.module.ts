@@ -4,13 +4,19 @@ import { EquipmentDashboardComponent } from './equipment/equipment-dashboard/equ
 import { EquipmentRegisterComponent } from './equipment/equipment-register/equipment-register.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { Path } from './paths';
+import { RentsDashboardComponent } from './rents/rents-dashboard/rents-dashboard.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'equipment', component: EquipmentDashboardComponent },
+  { path: Path.Home, component: HomeComponent },
+  { path: Path.Equipment, component: EquipmentDashboardComponent },
   {
-    path: 'equipment-register',
+    path: Path.EquipmentRegister,
     component: EquipmentRegisterComponent,
+  },
+  {
+    path: Path.Rents,
+    component: RentsDashboardComponent,
   },
   { path: '**', component: NotFoundComponent },
 ];

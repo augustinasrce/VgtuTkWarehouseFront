@@ -3,6 +3,7 @@ import {
   HTTP_INTERCEPTORS,
 } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -17,6 +18,7 @@ import { HomeComponent } from './home/home.component';
 import { AuthenticationInterceptor } from './interceptors/authentication.interceptor';
 import { MainComponent } from './main/main.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { RentsModule } from './rents/rents.module';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 
@@ -38,7 +40,9 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     MatToolbarModule,
     MatListModule,
     MatIconModule,
+    MatCardModule,
     BrowserAnimationsModule,
+    RentsModule,
   ],
   exports: [RouterModule],
   providers: [
