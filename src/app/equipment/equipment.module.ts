@@ -6,7 +6,6 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { EquipmentDashboardComponent } from './equipment-dashboard/equipment-dashboard.component';
 import { EquipmentRegisterFormComponent } from './equipment-register/equipment-register-form/equipment-register-form.component';
 import { EquipmentRegisterComponent } from './equipment-register/equipment-register.component';
@@ -25,7 +24,6 @@ import { EquipmentRegisterComponent } from './equipment-register/equipment-regis
     MatCardModule,
     MatButtonModule,
     MatInputModule,
-    MatSnackBarModule,
   ],
   exports: [EquipmentDashboardComponent, EquipmentRegisterComponent],
 })

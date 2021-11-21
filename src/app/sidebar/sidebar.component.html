@@ -1,6 +1,11 @@
 <mat-nav-list>
-  <a mat-list-item routerLink="/equipment">Equipment</a>
-  <a mat-list-item routerLink="/equipment-register"
+  <mat-divider></mat-divider>
+  <a mat-list-item [routerLink]="paths.Equipment">Equipment</a>
+  <mat-divider></mat-divider>
+  <a mat-list-item [routerLink]="paths.EquipmentRegister"
     >Equipment register</a
   >
+  <mat-divider></mat-divider>
+  <a mat-list-item [routerLink]="paths.Rents">Rents</a>
+  <mat-divider></mat-divider>
 </mat-nav-list>
